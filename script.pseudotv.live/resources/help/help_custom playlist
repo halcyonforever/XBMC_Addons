@@ -6,5 +6,15 @@
 
 Custom playlists are the recommended method for creating channel's from Kodi library content.
 PseudoTV Live supports playlist types: Movies, Episodes and Music. Do not use "TV Shows".
+Kodi does not allow in-interface creation of a mixed movies/TV playlists but one can be created manually and will be usable by PseudoTV Live: 
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="mixed">
+<name>Generic TV and Movie Playlist</name>
+<match>one</match>
+<rule field="playlist" operator="is">tv show episode playlist filename.xsp</rule>
+<rule field="playlist" operator="is">movie playlist filename.xsp</rule>
+<order direction="ascending">random</order>
+</smartplaylist>
 
 Preconfigured smartplaylists are available using the "Browse Community playlists" button.
